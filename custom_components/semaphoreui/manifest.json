@@ -1,0 +1,11 @@
+{
+  "domain": "semaphoreui",
+  "name": "Semaphore UI",
+  "codeowners": ["MassiPI"],
+  "config_flow": true,
+  "documentation": "",
+  "issue_tracker": "",
+  "iot_class": "local_polling",
+  "version": "1.0.0",
+  "requirements": []
+}

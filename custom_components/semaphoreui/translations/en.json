@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Semaphore UI Configuration",
+        "description": "This integration connects Home Assistant and Semaphore UI.\n• Create an API Token in Semaphore (Settings → API Tokens)\n• Insert the full URL including https://",
+        "data": {
+          "url": "Semaphore UI URL",
+          "token": "API Token",
+          "project_id": "Project ID"
+        }
+      },
+      "reconfigure": {
+        "title": "Semaphore UI Configuration",
+        "description": "This integration connects Home Assistant and Semaphore UI.\n• Create an API Token in Semaphore (Settings → API Tokens)\n• Insert the full URL including https://",
+        "data": {
+          "url": "Semaphore UI URL",
+          "token": "API Token",
+          "project_id": "Project ID"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid authentication (401/403). Check API token.",
+      "not_found": "Endpoint not found (404). Check URL.",
+      "cannot_connect": "Cannot connect to Semaphore UI.",
+      "http_error_400": "Bad request (400).",
+      "http_error_401": "Unauthorized (401).",
+      "http_error_403": "Forbidden (403).",
+      "http_error_404": "Not found (404).",
+      "http_error_500": "Server error (500).",
+      "http_error_502": "Bad gateway (502).",
+      "http_error_503": "Service unavailable (503).",
+      "http_error_504": "Gateway timeout (504).",
+      "unknown": "Unknown error occurred."
+    },
+
+    "abort": {
+      "already_configured": "Already configured",
+      "reconfigure_successful": "Reconfiguration successful"
+    }
+  }
+}
