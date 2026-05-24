@@ -7,7 +7,7 @@ import aiohttp
 import async_timeout
 import asyncio
 
-from .const import DOMAIN, CONF_URL, CONF_TOKEN, CONF_PROJECT_ID
+from .const import DOMAIN, CONF_URL, CONF_TOKEN, CONF_PROJECT_ID, CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL, POLLING_OPTIONS
 
 
 async def validate_connection(url: str, token: str) -> dict:
@@ -88,6 +88,11 @@ class SemaphoreConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 CONF_PROJECT_ID,
                 default=defaults.get(CONF_PROJECT_ID, 1)
             ): int,
+            vol.Required(
+                CONF_SCAN_INTERVAL,
+                default=defaults.get(CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL)
+            ): vol.In(POLLING_OPTIONS)
+
         })
 
     def _build_errors(self, result):

@@ -16,7 +16,8 @@
         "data": {
           "url": "Semaphore UI URL",
           "token": "API Token",
-          "project_id": "Project ID"
+          "project_id": "Project ID",
+		  "scan_interval": "Scan interval"
         }
       }
     },

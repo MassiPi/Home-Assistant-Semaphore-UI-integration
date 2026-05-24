@@ -6,7 +6,7 @@ import async_timeout
 from datetime import timedelta
 import logging
 
-from .const import DOMAIN, DEFAULT_SCAN_INTERVAL
+from .const import DOMAIN, CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -14,9 +14,14 @@ class SemaphoreCoordinator(DataUpdateCoordinator):
     def __init__(self, hass: HomeAssistant, entry: ConfigEntry):
         super().__init__(
             hass,
-            _LOGGER,                    # ← Questo mancava
+            _LOGGER,
             name=DOMAIN,
-            update_interval=timedelta(seconds=DEFAULT_SCAN_INTERVAL),
+            update_interval=timedelta(
+                seconds=entry.data.get(
+                    CONF_SCAN_INTERVAL,
+                    DEFAULT_SCAN_INTERVAL
+                )
+            )
         )
         self.entry = entry
         self.url = entry.data["url"].rstrip("/")
