@@ -3,8 +3,8 @@
   "name": "Semaphore UI",
   "codeowners": ["MassiPI"],
   "config_flow": true,
-  "documentation": "",
-  "issue_tracker": "",
+  "documentation": "https://github.com/MassiPi/Home-Assistant-Semaphore-UI-integration",
+  "issue_tracker": "https://github.com/MassiPi/Home-Assistant-Semaphore-UI-integration/issues",
   "iot_class": "local_polling",
   "version": "1.1.0",
   "requirements": []
